@@ -1,0 +1,261 @@
+body {
+	background: url(img/background.png);
+}
+
+header {
+	width: 100%;
+	height: 100px;
+    border-radius: 15px;
+}
+
+.cont {
+	width: 80%;
+	height: 1500px;
+	margin: auto;
+}
+
+footer {
+	width: 100%;
+	height: 300px;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.lang {
+	width: 3%;
+	height: 30px;
+	background: #0044ff;
+	color: white;
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-top: 3px;
+	margin-left: 3px;
+    font-family: Comic Sans, "Comic Sans MS", cursive;
+}
+
+.partner {
+	width: 17%;
+	height: 30px;
+	background: #0044ff;
+	color: white;
+	border-radius: 10px;
+    font-family: Comic Sans, "Comic Sans MS", cursive;
+}
+
+.logo {
+	margin-top: 10px;
+	margin-left: 12px;
+    color: red;
+    font-size: 30px;
+}
+
+.theme {
+	width: 110px;
+	height: 30px;
+	background: #0044ff;
+	color: white;
+	border-radius: 10px;
+	margin-right: 10px;
+	margin-top: 3px;
+	position: static;
+	right: 30px;
+	top: 30px;
+    font-family: Comic Sans, "Comic Sans MS", cursive;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    cursor: url(https://ani.cursors-4u.net/cursors/cur-12/cur1103.ani), url(https://ani.cursors-4u.net/cursors/cur-12/cur1103.png), auto !important;
+}
+
+html {
+	font-size: 10px;
+	font-family: Comic Sans, "Comic Sans MS", cursive;
+}
+
+.up {
+	background: url(img/upbut.png);
+	width: 35px;
+	height: 35px;
+	background-size: cover;
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+	border: 0px !important;
+	display: block;
+}
+
+/* Собственно сам слайдер */
+.slider{
+    max-width: 80%;
+    position: relative;
+    height: 550px;
+    margin-bottom: 15px;
+    margin: auto;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 550px;
+    border-radius: 25px;
+}
+
+/* Кнопки вперед и назад */
+.slider .prev, .slider .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Заголовок слайда */
+.slideText {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+    /* Выравнивание текста по горизонтали и по вертикали*/
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    /* Тень*/
+    text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+    text-decoration: none;
+}
+
+
+/* Кружочки */
+
+.slider-dots {
+  text-align: center;
+ 
+}
+.slider-dots_item{
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+    background-color: #aaa;
+}
+
+
+/* Анимация слайдов */
+
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes anim{
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+@keyframes animtwo{
+    50% {
+        transform: scale(1.1,1.1);
+    }
+}
+
+.product {
+	width: 250px;
+	height: 250px;
+	border-radius: 30px;
+	background: url(https://ubistatic19-a.akamaihd.net/ubicomstatic/ru-RU/global/media/Screen_7_-_IMAGE_300817.jpg);
+	background-size: cover;
+	float: left;
+	margin: 10px 30px 30px 20px;
+}
+
+.product#f1 {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+    background: url(https://static-prod.weplay.tv/2020-05-20/w-1680/webp/441263b7a57878dc441c89d61279f708_longread_large_cover.51493F-CDDDD5-9BACAF.jpeg);
+    background-size: cover;
+    float: left;
+    border: 2px solid black; 
+    margin: 10px 30px 30px 20px;
+}
+
+.product#f1:hover {
+    animation-duration: 0.5s;
+    transform-origin: center;
+    animation-name: animtwo;
+}
+
+.product:hover {
+    animation-duration: 0.5s;
+    transform-origin: center;
+    animation-name: animtwo;
+}
+
+table {
+	width: 100%;
+}
+
+.foot {
+    width: 20%;
+    color: white;
+    border: 2px solid white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.foot ul{
+    list-style-type: none;
+}
